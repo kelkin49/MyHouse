@@ -1,0 +1,19 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\GUIRoom.cs">
+    <Files>
+      <File FileName="Assets\Script\GUIRoom.cs" Line="49" Column="6" />
+      <File FileName="Assets\Script\cameraTexture.cs" Line="7" Column="17" />
+      <File FileName="Assets\Script\RadioPlay.cs" Line="60" Column="7" />
+      <File FileName="Assets\Script\Webtexture.cs" Line="6" Column="24" />
+      <File FileName="Assets\Script\Trigger\activelightroom.cs" Line="13" Column="6" />
+      <File FileName="Assets\Script\ChangeRimColorShader.cs" Line="6" Column="22" />
+      <File FileName="Assets\Script\MoveToPerso.cs" Line="19" Column="46" />
+      <File FileName="Assets\Script\tir.cs" Line="13" Column="46" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
