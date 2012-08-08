@@ -46,12 +46,12 @@ public class GUIRoom : MonoBehaviour {
 		{
 		    if (hit.collider.gameObject != null) 
 			{
-			//GameObject.Find("Group2").transform.LookAt((hit.point.x,hit.point.y+90,hit.point.z);
+				GameObject.Find("Group22").transform.LookAt(new Vector3(hit.point.x,hit.point.y,hit.point.z));
 				if (Input.GetMouseButtonDown(0)) 
 				{
 			
 					Rigidbody clone;
-            		clone = Instantiate(projectile2,GameObject.Find("Group2").transform.position , Quaternion.LookRotation(hit.point-GameObject.Find("Group2").transform.position)) as Rigidbody;
+            		clone = Instantiate(projectile2,GameObject.Find("Group22").transform.position , Quaternion.LookRotation(hit.point-GameObject.Find("Group22").transform.position)) as Rigidbody;
 					
 				}
 			}
@@ -59,7 +59,7 @@ public class GUIRoom : MonoBehaviour {
 		}
 		
 		
-		GameObject.Find("Bip01 Head").transform.LookAt(transform.position);
+		/*GameObject.Find("Bip01 Head").transform.LookAt(transform.position);
 		GameObject.Find("Bip01 Head").transform.Rotate(xHead,yHead,zHead);
 		if (tps%4<3)
 		{
@@ -74,7 +74,7 @@ public class GUIRoom : MonoBehaviour {
 			Rigidbody clone;
             clone = Instantiate(projectile, GameObject.Find("Bip01 R Hand").transform.position, rot) as Rigidbody;
 			tire=false;
-		}
+		}*/
 		
 		
 		tps+=Time.deltaTime;

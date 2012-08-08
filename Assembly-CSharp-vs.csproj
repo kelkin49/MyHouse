@@ -46,6 +46,7 @@
   <ItemGroup>
      <Compile Include="Assets\Script\ChangeRimColorShader.cs" />
      <Compile Include="Assets\Script\DayNightMaterial.cs" />
+     <Compile Include="Assets\Script\DestroyTeddy.cs" />
      <Compile Include="Assets\Script\GUIRoom.cs" />
      <Compile Include="Assets\Script\LerpLightEffectToMaterial.cs" />
      <Compile Include="Assets\Script\MoveToPerso.cs" />
