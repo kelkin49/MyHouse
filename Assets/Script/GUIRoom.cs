@@ -14,6 +14,7 @@ public class GUIRoom : MonoBehaviour {
 	public Texture2D[] Tex=new Texture2D[4];
 	private string[] Cible=new string[4];
 	public Texture vie;
+	public Texture viseur;
 	//public Texture viebarcontour;
 	private float restevie=0.6f;
 	private float fvie=0.6f;
@@ -22,8 +23,10 @@ public class GUIRoom : MonoBehaviour {
 	private bool tire;
 	private Quaternion rot;
 	RaycastHit hit;
+	
 	// Use this for initialization
 	void Start () {
+		
 		for (int i=0;i<Cible.Length;i++)
 		{
 			Cible[i]="Valide";
@@ -46,7 +49,7 @@ public class GUIRoom : MonoBehaviour {
 		{
 		    if (hit.collider.gameObject != null) 
 			{
-				GameObject.Find("Group22").transform.LookAt(new Vector3(hit.point.x,hit.point.y,hit.point.z));
+				//GameObject.Find("Group22").transform.LookAt(new Vector3(hit.point.x,hit.point.y,hit.point.z));
 				if (Input.GetMouseButtonDown(0)) 
 				{
 			
@@ -140,7 +143,7 @@ public class GUIRoom : MonoBehaviour {
     }
 	
 	void OnGUI()
-	{
+	{ 
 		GUI.skin=oGuiSkin;
 		GUI.color=new Color(r,g,b,0.2f);
 		GUI.Label(new Rect(0,0,Screen.width,Screen.height),"");
@@ -155,11 +158,15 @@ public class GUIRoom : MonoBehaviour {
 		
 		GUI.color=new Color(1,1,1,1);
 		GUI.Label(new Rect(0.2f*Screen.width,0.9f*Screen.height,0.6f*Screen.width,0.1f*Screen.height),"","vie");
-		GUI.Label(new Rect(0.85f*Screen.width,0f*Screen.height,0.15f*Screen.width,0.1f*Screen.height),tps.ToString("0.00"));
+		GUI.Label(new Rect(0.85f*Screen.width,0f*Screen.height,0.15f*Screen.width,0.1f*Screen.height),tps.ToString("0.00"),"Timer");
 		
 		GUI.Label(new Rect(0f*Screen.width,0f*Screen.height,0.1f*Screen.width,0.1f*Screen.height),Tex[0]);
 		GUI.Label(new Rect(0f*Screen.width,0.1f*Screen.height,0.1f*Screen.width,0.1f*Screen.height),Tex[1]);
 		GUI.Label(new Rect(0f*Screen.width,0.2f*Screen.height,0.1f*Screen.width,0.1f*Screen.height),Tex[2]);
 		GUI.Label(new Rect(0f*Screen.width,0.3f*Screen.height,0.1f*Screen.width,0.1f*Screen.height),Tex[3]);
+		
+		GUI.BeginGroup( new Rect(0.48f*Screen.width,0.45f*Screen.height,0.05f*Screen.width,0.06f*Screen.height));
+		GUI.DrawTexture( new Rect(0,0,0.05f*Screen.width,0.06f*Screen.height),viseur);
+		GUI.EndGroup();
 	}
 }

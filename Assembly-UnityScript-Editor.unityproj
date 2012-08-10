@@ -46,6 +46,7 @@
   <ItemGroup>
      <Compile Include="Assets\Editor\RenderCubemapWizard.js" />
      <None Include="Assets\Shader\NewShader.shader" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
      <None Include="Assets\Shader\LerpDemo.shader" />
      <None Include="Assets\Shader\Halo.shader" />

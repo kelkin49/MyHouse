@@ -51,7 +51,6 @@
      <Compile Include="Assets\Script\LerpLightEffectToMaterial.cs" />
      <Compile Include="Assets\Script\MoveToPerso.cs" />
      <Compile Include="Assets\Script\RadioPlay.cs" />
-     <Compile Include="Assets\Script\Trigger\GuiTrigger.cs" />
      <Compile Include="Assets\Script\Trigger\activelightroom.cs" />
      <Compile Include="Assets\Script\TurnToCamera.cs" />
      <Compile Include="Assets\Script\Water.cs" />
@@ -60,6 +59,7 @@
      <Compile Include="Assets\Script\tir.cs" />
      <Compile Include="Assets\Script\turnmaterial.cs" />
      <None Include="Assets\Shader\NewShader.shader" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
      <None Include="Assets\Shader\LerpDemo.shader" />
      <None Include="Assets\Shader\Halo.shader" />

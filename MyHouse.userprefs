@@ -1,16 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\DestroyTeddy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\GUIRoom.cs">
     <Files>
-      <File FileName="Assets\Script\GUIRoom.cs" Line="49" Column="53" />
-      <File FileName="Assets\Script\cameraTexture.cs" Line="7" Column="17" />
-      <File FileName="Assets\Script\RadioPlay.cs" Line="60" Column="7" />
-      <File FileName="Assets\Script\Webtexture.cs" Line="6" Column="24" />
-      <File FileName="Assets\Script\Trigger\activelightroom.cs" Line="13" Column="6" />
-      <File FileName="Assets\Script\ChangeRimColorShader.cs" Line="6" Column="22" />
-      <File FileName="Assets\Script\MoveToPerso.cs" Line="19" Column="46" />
-      <File FileName="Assets\Script\tir.cs" Line="17" Column="4" />
-      <File FileName="Assets\Script\DestroyTeddy.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\GUIRoom.cs" Line="160" Column="107" />
+      <File FileName="Assets\Script\cameraTexture.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\RadioPlay.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Webtexture.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Trigger\activelightroom.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\ChangeRimColorShader.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\MoveToPerso.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\tir.cs" Line="14" Column="23" />
+      <File FileName="Assets\Script\DestroyTeddy.cs" Line="27" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

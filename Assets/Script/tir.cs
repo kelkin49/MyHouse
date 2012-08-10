@@ -8,6 +8,12 @@ public class tir : MonoBehaviour {
 		t=Time.time;
 	}
 	
+	
+	void OnTriggerEnter(Collider other) 
+	{
+		Destroy(gameObject);
+	}
+	
 	// Update is called once per frame
 	void Update () {
 		transform.Translate(Vector3.forward*0.1f); 
