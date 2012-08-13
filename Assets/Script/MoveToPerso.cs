@@ -19,4 +19,9 @@ public class MoveToPerso : MonoBehaviour {
 		transform.Translate(Vector3.forward*0.1f); 
 		
 	}
+	
+	void OnTriggerEnter(Collider other) 
+	{
+		Destroy(gameObject);
+	}
 }

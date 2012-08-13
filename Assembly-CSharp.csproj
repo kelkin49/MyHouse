@@ -51,6 +51,7 @@
      <Compile Include="Assets\Script\LerpLightEffectToMaterial.cs" />
      <Compile Include="Assets\Script\MoveToPerso.cs" />
      <Compile Include="Assets\Script\RadioPlay.cs" />
+     <Compile Include="Assets\Script\StartGUIRoom.cs" />
      <Compile Include="Assets\Script\Trigger\activelightroom.cs" />
      <Compile Include="Assets\Script\TurnToCamera.cs" />
      <Compile Include="Assets\Script\Water.cs" />

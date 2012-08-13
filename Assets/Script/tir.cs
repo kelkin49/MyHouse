@@ -11,7 +11,7 @@ public class tir : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other) 
 	{
-		Destroy(gameObject);
+		if(other.name!="First Person Controller")Destroy(gameObject);
 	}
 	
 	// Update is called once per frame
