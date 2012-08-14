@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DestroyTeddy : MonoBehaviour {
 	
-	private Color col=new Color(1,1,1);
+	public Color col=new Color(1,1,1);
 	public float nbPtsVie=5;
 	private float yHead,zHead=0f;
 	private float xArm,yArm,zArm=0f;
@@ -12,9 +12,18 @@ public class DestroyTeddy : MonoBehaviour {
 	private Quaternion rot;
 	public Rigidbody projectile;
 	public int nb;
+	private GameObject teddygun;
+	private GameObject teddyhead;
+	private GameObject teddyarm;
+	private GameObject teddyorient;
+	public float y=0;
 	
 	void Start () 
 	{
+		teddygun=GameObject.Find("TeddyBear"+nb+"/teddy/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm/Group1/Group4/Mesh3");
+		teddyhead=GameObject.Find("TeddyBear"+nb+"/teddy/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head");
+		teddyarm=GameObject.Find("TeddyBear"+nb+"/teddy/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm");
+		teddyorient=GameObject.Find("First Person Controller");
 		yHead=zHead=-90f;
 		xArm=-180f;
 		yArm=90f;
@@ -23,39 +32,29 @@ public class DestroyTeddy : MonoBehaviour {
 	
 	void Update () {
 		tps+=Time.deltaTime;
-		if(col.r>0)
+		if(col.r>0 && !teddyorient.GetComponent<GUIRoom>().fin)
 		{
+			teddyhead.transform.LookAt(teddyorient.transform.position);
+			teddyhead.transform.Rotate(0,yHead,zHead);
 			
-			
-			GameObject.Find("TeddyBear"+nb+"/teddy/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head").transform.LookAt(GameObject.Find("First Person Controller").transform.position);
-			GameObject.Find("TeddyBear"+nb+"/teddy/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head").transform.Rotate(0,yHead,zHead);
-			
-			GameObject.Find("TeddyBear"+nb+"/teddy/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm").transform.LookAt(GameObject.Find("First Person Controller").transform.position);
-			GameObject.Find("TeddyBear"+nb+"/teddy/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm").transform.Rotate(xArm,yArm,zArm);
+			teddyarm.transform.LookAt(teddyorient.transform.position);
+			teddyarm.transform.Rotate(xArm,yArm,zArm);
 			if (tps%4<3.5f)
 			{
 				tire=true;
 			}
 			if (tps%4>3.5f && tire)
 			{
-				rot=GameObject.Find("TeddyBear"+nb+"/teddy/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm").transform.rotation;
+				rot=teddyarm.transform.rotation;
 				Rigidbody clone;
-	            clone = Instantiate(projectile, GameObject.Find("TeddyBear"+nb+"/teddy/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm/Group1/Group4").transform.position, rot) as Rigidbody;
+	            clone = Instantiate(projectile, new Vector3(teddygun.transform.position.x,teddygun.transform.position.y-y,teddygun.transform.position.z), rot) as Rigidbody;
 				tire=false;
 			}
-		}
-		else
-		{
-			
-			//Screen.lockCursor=false;
-			//Screen.showCursor=true;
 		}
 	}
 	
 	void OnTriggerEnter(Collider other) 
 	{
-		
-		//Debug.Log(other.name);
 		if(other.name=="Laser2(Clone)")
 		{
 			col.r-=1/nbPtsVie;

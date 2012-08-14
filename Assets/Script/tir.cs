@@ -11,15 +11,13 @@ public class tir : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other) 
 	{
+		//Debug.Log(other.name);
 		if(other.name!="First Person Controller")Destroy(gameObject);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Translate(Vector3.forward*0.1f); 
-		if(Time.time-t>3)
-		{
-			Destroy(gameObject); 
-		}
+		transform.Translate(Vector3.forward*Time.deltaTime*3); 
+		
 	}
 }
